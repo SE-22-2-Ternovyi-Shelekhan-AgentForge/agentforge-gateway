@@ -9,7 +9,13 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "AgentForge Gateway API", Version = "v1" });
 });
 
+builder.Services.AddReverseProxy()
+    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
+
 var app = builder.Build();
+
+app.MapReverseProxy();
+
 
 app.UseSwagger();
 app.UseSwaggerUI(c =>

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/AgentForge.Gateway/AgentForge.Gateway.csproj" />
+  <Project Path="tests/AgentForge.Gateway.Tests/AgentForge.Gateway.Tests.csproj" />
+</Solution>
